@@ -1,4 +1,4 @@
-![pacman_game](media/15113050232626/pacman_game.gif)
+![](http://inst.eecs.berkeley.edu/~cs188/pacman/images/pacman_game.gif)
 
 # Aims
 The aims of this project are to improve your understanding of the various search algorithms and to experience how to derive heuristics.

@@ -26,7 +26,9 @@ The purpose of this project is to implement a Pac Man Autonomous Agent that can 
 
 ### Implementation of Pac Man
 
-Produce a working agent that can play Pacman within the Pacman game engine.
+Produce a working agent that can play Pacman within the Pacman game engine, based on [Berkeley Pac Man](http://ai.berkeley.edu/contest.html).
+
+Only myTeam.py got edited.
 
 #### To run the planner:
 

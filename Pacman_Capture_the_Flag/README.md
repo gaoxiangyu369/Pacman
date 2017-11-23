@@ -28,7 +28,7 @@ The purpose of this project is to implement a Pac Man Autonomous Agent that can 
 
 Produce a working agent that can play Pacman within the Pacman game engine.
 
-##### To run the planner:
+#### To run the planner:
 
 -------
 
@@ -41,7 +41,7 @@ To run this planner, use the team color to choose side then the file name as fol
 -b myTeam
 ```
 
-##### Code documentation:
+#### Code documentation:
 
 -------
 
@@ -56,7 +56,7 @@ All legal actions are considered to choose the best next move to make. For each 
 
 Due to the range of sight, the enemy location can be speculated through iteratively filtering noisy distance data to infer the mostly likely position of the enemy.
 
-##### Planning approach:
+#### Planning approach:
 
 -------
 
@@ -65,6 +65,7 @@ The strategies that each Pacman agent can impliment are as follows:
 At the start of the game, each agent moves to the centre along the shortest path possible. Taking the shortest path improves the chance that our agents can reach the expected point first to guard our foods. The centre is determined by the closest food to enemy territory and the available positions which are the closest to the enemy territory.
  
 **OFFENCE:**
+
 If one of our agents realize that our team is losing on points or two invaders are constrained by one of our ghosts, the other one will take this opportunity to be more aggressive on offense. 
 
 One a food piece is eaten, the agent makes a decision to either return and deposit the food or to continue to the next closest food and eat that. As the agent eats more food and moves further away from its homeside, it becomes increasingly 'nervous' and is more likely to go back and deposit food rather than continue to venture further into enemy territory. 
@@ -72,6 +73,7 @@ One a food piece is eaten, the agent makes a decision to either return and depos
 If the attacking agent sees a ghost, it begins moving away from it, but still searches for more food. When the ghost begins to close in, the Pacman will begin to move directly away from the ghost towards its own side for safety and to deposit food. If a power capsule is close by, the Pacman will reach the capsule for defence. 
 
 **DEFENCE:**
+
 the defensive ghost would hover along its defend position if no enemy on site.
 Once the invading enemy is within line of sight, the defensive ghost agents starts to chase the enemy and if two invaders appear in our home area, the attack agent would be call to help defends. If the invading Pacman eats a power capsule, the ghosts still converge on the invader, but stay one space away for safety. Once the invader powers down, it can be killed instantly. 
 

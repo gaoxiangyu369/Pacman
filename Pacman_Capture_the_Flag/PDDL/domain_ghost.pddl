@@ -1,0 +1,22 @@
+﻿(define (domain ghost)
+    (:requirements :typing :conditional-effects)
+    (:types        position)
+    ;; whether the ghost is scared is determined by the pacman and it should be recorded in the problem's initialisation
+    (:predicates (ghostAt ?x - position)
+	               (pacmanAt ?x - position)
+	               (pelletAt ?x - position)
+	               (adjacent ?x ?y - position)
+	               (scared)
+    )
+	;; move around and hunt down pacman
+    (:action move
+        :parameters (?from ?to - position)
+        :precondition (and (ghostAt ?from)
+                           (adjacent ?from ?to)
+                      )
+        :effect (and (ghostAt ?to)
+                     (not (ghostAt ?from))
+                     (not (pacmanAt ?to))
+                )
+    )
+)
